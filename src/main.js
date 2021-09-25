@@ -10,22 +10,14 @@ import {
     ticked,
 
 } from "./timing.js";
+import {
+    toggle
+} from "./toggle.js";
 
 
 
-/*ссылки на чек боксы*/
 const toggleBtn = document.getElementById("toggle");
-toggleBtn.addEventListener('click', function () {
-
-    let formCollection = document.querySelectorAll(".form");
-    formCollection.forEach(element => {
-        element.classList.toggle("visible");
-    })
-})
-
-
-
-
+toggleBtn.addEventListener('click', toggle);
 
 /*Ссылки на кнопки таймера*/
 const startTimerBtn = document.getElementById("startTimer");
@@ -35,15 +27,11 @@ startTimerBtn.addEventListener("click", ticked);
 stopTimerBtn.addEventListener("click", tickedStop);
 
 
-
 /*ссылки на форму и на тег с выводом результата*/
 const dateCalcForm = document.getElementById("datecalc");
 const dateCalcResult = document.getElementById("datecalc__result");
 
 dateCalcForm.addEventListener("submit", handleCalcDates);
-
-
-
 
 function handleCalcDates(event) {
     dateCalcResult.innerHTML = "";

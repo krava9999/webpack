@@ -20,6 +20,7 @@ export function ticked(act) {
 }
 
 
+
 export function playAudio() {
     let timeToChoose = new Audio('gman.mp3');
     timeToChoose.play();
